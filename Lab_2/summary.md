@@ -63,11 +63,18 @@
     * Hệ thống: Truyền trực tiếp từ hệ thống
         * Ví dụ: Send user his phone low battery
     * Ứng dụng: khởi động service, tải nội dung
+    * 
 ### Content Provider
 * Usage: Truy cập tập hợp các dữ liệu ứng dụng: tệp tin, SQLite, tài nguyên Web, danh bạ, tài nguyên đa tài nguyên
+* Tương tác với data từ ứng dụng khác, SQL lite,
 ### Notification
-* Usage: Gửi thông báo tới người dùng
+* Usage: Gửi thông báo tới người dùng, 
+    * CÓ thể qua thanh trạng thái
+    ss với Broadcast Receiver: Thông báo dễ dàng, không vừa nghe vừa phản hồi (Ex: Pin yếu)
 
 ### Intent
+* Vận chuyển các message giữa các component ()
 * Usage: Tạo yêu cầu giữa các thành phần trong ứng dụng, giữa các ứng dụng: khởi động Activity, khởi động Service
     * Ví dụ: Gọi mở window Activity2 từ Activity 1
+        Tại sao lại không chuyển thẳng giữa 2 activity mà phải qua Android System
+        - Android System sẽ check intent-filter của Activity 1 xem có Activity 2 trong đó không
