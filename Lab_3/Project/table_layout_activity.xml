@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/black">
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:background="#0B0B0B"
+            android:gravity= "start"
+            android:paddingVertical="7dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="5dp"
+            android:text="Open...."
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginStart="250dp"
+            android:text="Ctrl-O"
+            android:textColor="@color/white"/>
+
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:background="#0B0B0B"
+
+            android:gravity= "left"
+            android:paddingVertical="7dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="5dp"
+            android:text="Save...."
+            android:textColor="#FFFFFF"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginStart="250dp"
+            android:text="Ctrl-S"
+
+            android:textColor="@color/white"/>
+
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:background="#0B0B0B"
+            android:gravity= "left"
+            android:paddingVertical="7dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="5dp"
+            android:text="Save As...."
+            android:textColor="#FFFFFF"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginStart="217dp"
+            android:text="Ctrl-Shift-S"
+            android:textColor="@color/white"/>
+
+    </TableRow>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@android:color/darker_gray"/>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="7dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:contentDescription="Icon Description"
+                android:src="@drawable/exit" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:background="#0B0B0B"
+                android:gravity="left|center"
+
+                android:text="Import"
+                android:textColor="#FFFFFF"
+                tools:ignore="RtlHardcoded" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginStart="250dp"
+            android:text=""
+            android:textColor="@color/white" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="7dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:contentDescription="Icon Description"
+                android:src="@drawable/exit" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:background="#0B0B0B"
+                android:gravity="left|center"
+
+                android:text="Export"
+                android:textColor="#FFFFFF"
+                tools:ignore="RtlHardcoded" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginStart="250dp"
+            android:text="Ctrl-E"
+
+            android:textColor="@color/white"/>
+
+    </TableRow>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@android:color/darker_gray"/>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:background="#0B0B0B"
+            android:gravity= "start"
+            android:paddingVertical="7dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="5dp"
+            android:text="Quit"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginStart="280dp"
+            android:text=""
+            android:textColor="@color/white"/>
+
+    </TableRow>
+</TableLayout>
