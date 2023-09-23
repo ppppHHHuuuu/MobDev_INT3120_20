@@ -13,6 +13,7 @@
 * Similar to Date
 
 ## Clock
+<<<<<<< HEAD
 * Digital Clock
 ** Format: x:xx XM
 
@@ -20,5 +21,19 @@
 ** Format: circle clock
 
 ## Tab Selector (Deprecated)
+=======
+* Digital Clock (Deprecated)
+** Change to TextClock
+  - have 12h and 24h format
+  - inherit android.widget.TextView
+  - inherit android.widget.View
+** Format: x:xx XM
+
+*Analog Clock (Deprecated)
+** Format: circle clock
+
+## Tab Selector (Deprecated) 
+    Change to TabLayout 
+>>>>>>> origin/main
 ### TabHost (Deprecated)
 - Caring Tab Widgets and FrameLayout

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint = "Enter your name"
+        android:autofillHints=""
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/phoneNumberInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint = "Enter your phone number"
+        android:autofillHints=""
+        android:inputType="text"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RadioGroup
+            android:id="@+id/groupBtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:id="@+id/cheeseBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cheese"/>
+            <RadioButton
+                android:id="@+id/doubleCheeseBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 x Cheese" />
+            <RadioButton
+                android:id="@+id/noneBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="None" />
+        </RadioGroup>
+        <RadioGroup
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/groupBtn2"
+            android:layout_below="@id/groupBtn1"
+            >
+
+            <RadioButton
+                android:id="@+id/squareBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rectangle"/>
+            <RadioButton
+                android:id="@+id/roundBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Round" />
+        </RadioGroup>
+       <RadioGroup
+           android:orientation="horizontal"
+
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/groupBtn3"
+           android:layout_below="@id/groupBtn2"
+           >
+           <RadioButton
+               android:id="@+id/pepperoniBtn"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Pepperoni"
+               tools:ignore="TouchTargetSizeCheck" />
+           <RadioButton
+               android:id="@+id/mushroomBtn"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+
+               android:text="Mushroom"
+               tools:ignore="TouchTargetSizeCheck" />
+           <RadioButton
+               android:id="@+id/veggiesBtn"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Veggies"
+               tools:ignore="TouchTargetSizeCheck" />
+       </RadioGroup>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your ordering"
+        android:textSize="20sp"/>
+
+
+    <EditText
+        android:id="@+id/groceriesListOutput"
+        android:layout_width="match_parent"
+        android:layout_height="356dp"
+        android:background="@color/gray"
+        android:gravity="top|start"
+        android:padding="20dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="30dp">
+        <Button
+            android:id="@+id/smsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EXIT"/>
+
+        <Button
+            android:id="@+id/placeOrderbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SMS-Place YOUR ORDER"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+</LinearLayout>
