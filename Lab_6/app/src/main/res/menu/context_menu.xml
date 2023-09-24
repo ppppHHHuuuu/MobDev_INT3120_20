@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/itemUpload"
+        android:title="Upload"
+        >
+
+    </item>
+    <item
+        android:id="@+id/itemBookmark"
+        android:title="Bookmark"
+        >
+
+    </item>
+    <item
+        android:id="@+id/itemShare"
+        android:title="Share"
+        >
+        <menu>
+            <item android:id="@+id/itemShareFB"
+                android:title="FB"></item>
+            <item android:id="@+id/itemShareYT"
+                android:title="Youtube"></item>
+
+        </menu>
+    </item>
+
+</menu>
