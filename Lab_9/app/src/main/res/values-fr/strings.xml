@@ -2,4 +2,7 @@
     <string name="app_name">Labor 9</string>
     <string name="login">Hola</string>
     <string name="password">Ciao</string>
+    <string name="save">Save in Fr</string>
+    <string name="load">Load in Fr</string>
+
 </resources>

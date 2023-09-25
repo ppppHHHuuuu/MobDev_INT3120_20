@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         editor.putString("name", editTextUsername.getText().toString());
         editor.putInt("password", password);
         editor.apply();
+        Toast.makeText(MainActivity.this, "Saved Login data", Toast.LENGTH_SHORT).show();
     }
 
     private void loadData() {
@@ -87,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         }
         editTextUsername.setText(username);
         editTextPassword.setText(String.valueOf(password));
-        Log.d("storedUserName", sharedPreferences.getAll().toString());
+        Log.d("storedUserName", sharedPreferences.getString("name", "null"));
         Log.d("Username", username);
         Log.d("Password", String.valueOf(password));
         editor.apply();

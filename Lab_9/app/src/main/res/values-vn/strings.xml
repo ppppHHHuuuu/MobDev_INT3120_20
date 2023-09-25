@@ -3,4 +3,7 @@
     <string name="app_name">Bai 9</string>
     <string name="login">Ten dang nhap</string>
     <string name="password">Mat khau</string>
+    <string name="save">Luu</string>
+    <string name="load">Ghi</string>
+
 </resources>
