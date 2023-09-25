@@ -2,7 +2,9 @@ package com.example.lab9;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.location.Address;
@@ -28,8 +30,7 @@ import java.util.zip.Inflater;
 
 public class LanguageSettingActivity extends AppCompatActivity{
 
-
-    String[] languages = {"None", "English", "France", "VietNam"};
+    String[] languages = {"en", "fr", "vn"};
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,37 +38,44 @@ public class LanguageSettingActivity extends AppCompatActivity{
 
         Spinner spinner;
 
+        SharedPreferences sharedPreferences = getSharedPreferences("Language", Context.MODE_PRIVATE);
+        String currentLanguage = sharedPreferences.getString("Language", "");
+
         spinner =  findViewById(R.id.spinner);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, languages);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter);
-        spinner.setSelection(0);
+//        spinner.setSelection(1);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                String getLanguage = adapterView.getItemAtPosition(i).toString();
-                if (getLanguage.equals("None")) {
-                    Toast.makeText(LanguageSettingActivity.this, "None selected", Toast.LENGTH_SHORT).show();
-                }
 
-                else if (getLanguage.equals("English")) {
+                String getLanguage = adapterView.getItemAtPosition(i).toString();
+
+//                if (getLanguage.equals("None")) {
+//                    Toast.makeText(LanguageSettingActivity.this, "None selected", Toast.LENGTH_SHORT).show();
+//                }
+
+                 if (getLanguage.equals("en") && !getLanguage.equals(currentLanguage))  {
+
                     Toast.makeText(LanguageSettingActivity.this, "English selected", Toast.LENGTH_SHORT).show();
-                    setLocal(LanguageSettingActivity.this, "en");
+//                    setLocal(LanguageSettingActivity.this, "en");
+                     putLanguage(getLanguage);
 
                     restartApp();
-
                 }
-                else if  (getLanguage.equals("France")) {
+                else if  (getLanguage.equals("fr") && !getLanguage.equals(currentLanguage) ) {
                     Toast.makeText(LanguageSettingActivity.this, "France selected", Toast.LENGTH_SHORT).show();
 
-                    setLocal(LanguageSettingActivity.this, "fr");
-
+//                    setLocal(LanguageSettingActivity.this, "fr");
+                     putLanguage(getLanguage);
                     restartApp();
                 }
-                else if (getLanguage.equals("VietNam")) {
+                else if (getLanguage.equals("vn") && !getLanguage.equals(currentLanguage)) {
                     Toast.makeText(LanguageSettingActivity.this, "Viet Nam selected", Toast.LENGTH_SHORT).show();
-                    setLocal(LanguageSettingActivity.this, "vn");
+//                    setLocal(LanguageSettingActivity.this, "vn");
+                     putLanguage(getLanguage);
 
                     restartApp();
                 }
@@ -81,9 +89,18 @@ public class LanguageSettingActivity extends AppCompatActivity{
         });
 
     }
+
+    private void putLanguage(String language) {
+        SharedPreferences sharedPreferences = getSharedPreferences("Language", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        editor.putString("Language", language);
+        editor.apply();
+
+    }
     private void restartActivity() {
         // Create a new intent for the current activity
-        Intent intent = getIntent();
+        Intent intent = new Intent(this, LanguageSettingActivity.class);
 
         // Finish the current activity
         finish();
@@ -102,15 +119,6 @@ public class LanguageSettingActivity extends AppCompatActivity{
 
     }
 
-    private void setLocal(Activity activity, String selectedLanguage) {
-        Locale locale = new Locale(selectedLanguage);
-        Locale.setDefault(locale);
 
-        Resources resource = activity.getResources();
-        Configuration configuration = activity.getResources().getConfiguration();
-        configuration.setLocale(locale);
-        resource.updateConfiguration(configuration, resource.getDisplayMetrics());
-
-    }
 
 }
