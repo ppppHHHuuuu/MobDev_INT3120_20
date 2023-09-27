@@ -1,5 +1,6 @@
 package com.example.lab9.database;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.DatabaseErrorHandler;
@@ -7,7 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
-
+import java.util.UUID;
 public class UserDBHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "UserContract.db";
@@ -54,8 +55,21 @@ public class UserDBHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-//    public long insertUserInfo(String name, String age) {
-//
-//    }
+    public long insertUserInfo(String name, String age) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        UUID uuid = UUID.randomUUID();
+        String userName = name;
+        String userAge = age;
+        ContentValues values = new ContentValues();
+
+        values.put(UserContract.UserInfor.COLUMN_ID, uuid.toString());
+        values.put(UserContract.UserInfor.COLUMN_NAME, userName);
+        values.put(UserContract.UserInfor.COLUMN_AGE, userAge);
+
+        long newRowUser = db.insert(UserContract.UserInfor.TABLE_NAME, null, values);
+        db.close();
+        return newRowUser;
+    }
 
 }
