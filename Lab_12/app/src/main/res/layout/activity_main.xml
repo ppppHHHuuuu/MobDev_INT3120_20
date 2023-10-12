@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+   >
+
+    <Button
+        android:layout_marginBottom="10dp"
+        android:id="@+id/btnCamera"
+        android:text="Open Camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_marginBottom="10dp"
+        android:id="@+id/btnMessage"
+        android:text="Open Message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_marginBottom="10dp"
+        android:id="@+id/btnCall"
+        android:text="Open Call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_marginBottom="10dp"
+        android:id="@+id/btnWifi"
+        android:text="Open Wifi Change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginBottom="10dp"
+        android:id="@+id/btnBluetooth"
+        android:text="Open Bluetooth control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
